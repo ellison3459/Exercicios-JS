@@ -1,20 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Glaubert-Carvalho">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXERCÍCIOS 1</title>
-    <script>
 
-        var idade = prompt('Qual sua idade ?');
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        alert("O dobro é "+idade*2);
+    <title>EXERCÍCIOS 5</title>
 
+    <script type="text/javascript">
+
+        function calcular(){
+
+            var n1 = document.getElementById("ncont").value;
+            var nMenos1 = n1-1;
+
+            var nMais1 = parseInt(n1)+parseInt(1)
+            
+            // var result =parseFloat(diaHora)+parseFloat(hora);
+
+            alert("Seu antecessor é "+nMenos1)
+            alert("Seu posterior é "+nMais1)
+
+        }
     </script>
+
+    <style>
+        .container-sm {
+            background-color: rgb(33, 224, 192);
+            width: 200px;
+            border-radius: 10px;
+            padding: 10px;
+            display: block;
+            color: rgb(255, 255, 255);
+        }
+
+        #visualizar {
+            /* margin-top: 5px; */
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            background-color: rgb(33, 224, 192);
+            padding-left: 50%;
+            margin-bottom: 30px;
+            color: aqua;
+        }
+
+        .form-control {
+            width: 100%;
+        }
+
+        .btn {
+            width: 100%;
+            border: solid 2px rgb(0, 0, 0);
+            color: rgb(22, 8, 8);
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Variáveis</h1>
-    
+    <div class="nav">
+    <h1>Exercício 5</h1>    
+    </div>
+        <div class="container-sm">
+
+            <form>
+                <div class="mb-3">
+                  <label for="dia" class="form-label">Número :</label>
+                  <input type="number" class="form-control" id="ncont" placeholder="Ex.: 123..">
+                </div>
+                
+                <div class="botao">
+                <button id="visualizar" class="btn btn-outline-primary  btn-lg" onclick="calcular()">Calcular</button>
+                </div>
+                
+            </form>
+
+        </div>
+
 </body>
 </html>
